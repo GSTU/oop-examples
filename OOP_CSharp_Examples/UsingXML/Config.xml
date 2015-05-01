@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <x>5</x>
+  <y>7</y>
+  <victoryCondition>3</victoryCondition>
+  <message>Message text</message>
+</config>

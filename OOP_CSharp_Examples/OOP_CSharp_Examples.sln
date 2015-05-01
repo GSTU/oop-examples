@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Web
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewExample", "TreeViewExample\TreeViewExample.csproj", "{FF0228E4-779C-4C4C-A5B2-1627F995A497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingXML", "UsingXML\UsingXML.csproj", "{51377265-BE7A-4559-B17C-2C2AAD3AE9E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{FF0228E4-779C-4C4C-A5B2-1627F995A497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF0228E4-779C-4C4C-A5B2-1627F995A497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF0228E4-779C-4C4C-A5B2-1627F995A497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51377265-BE7A-4559-B17C-2C2AAD3AE9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51377265-BE7A-4559-B17C-2C2AAD3AE9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51377265-BE7A-4559-B17C-2C2AAD3AE9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51377265-BE7A-4559-B17C-2C2AAD3AE9E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
