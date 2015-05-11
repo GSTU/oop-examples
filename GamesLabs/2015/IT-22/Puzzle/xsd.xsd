@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="level" type="level_string" />
+        <xs:element name="path" type="xs:string" />
+        <xs:element name="size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="x_int"/>
+              <xs:element name="y" type="y_int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="result" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+<xs:simpleType name="x_int">
+   <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2"/>
+      <xs:maxInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xs:simpleType name="y_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2"/>
+      <xs:maxInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xs:simpleType name="level_string">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Новичек"/>
+    <xs:enumeration value="Любитель"/>
+    <xs:enumeration value="Профессионал"/>
+  </xs:restriction>
+</xs:simpleType> 
+</xs:schema>
