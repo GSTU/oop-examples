@@ -17,13 +17,6 @@ namespace Puzzle
         public Form1()
         {
             InitializeComponent();
-            string str = Application.StartupPath;
-            s = str.Split('\\');
-            s[0] += '\\';
-            for (int i = 1; i < s.Length - 2; i++)
-            {
-                s[0] += s[i] + '\\';
-            }
             Start();
         }
         PictureBox[] picturebox = null;
@@ -147,10 +140,10 @@ namespace Puzzle
             try
             {
                 XmlReaderSettings xmlreadersettings = new XmlReaderSettings();
-                xmlreadersettings.Schemas.Add(null, s[0] + "xsd.xsd");
+                xmlreadersettings.Schemas.Add(null,"xsd.xsd");
                 xmlreadersettings.ValidationType = ValidationType.Schema;
                 xmlreadersettings.ValidationEventHandler += new ValidationEventHandler(xmlreadersettingsValidationEventHandler);
-                XmlReader xmlreader = XmlReader.Create(s[0] + "xml.xml", xmlreadersettings);
+                XmlReader xmlreader = XmlReader.Create("xml.xml", xmlreadersettings);
                 while (xmlreader.Read()) { }
                 if (flag == true)
                 {
@@ -158,7 +151,7 @@ namespace Puzzle
                     label2.Text = "Лучший результат: ";
                     label2.Visible = false;
                     XmlDocument xmldoc = new XmlDocument();
-                    xmldoc.Load(s[0] + "xml.xml");
+                    xmldoc.Load("xml.xml");
                     bitmap = new Bitmap(xmldoc.DocumentElement.SelectSingleNode("path").InnerText);
                     wlength = Convert.ToInt32(xmldoc.DocumentElement.SelectSingleNode("size").FirstChild.InnerText);
                     hlength = Convert.ToInt32(xmldoc.DocumentElement.SelectSingleNode("size").LastChild.InnerText);
@@ -178,7 +171,7 @@ namespace Puzzle
                 }
                 else
                 {
-                    bitmap = new Bitmap(s[0] + "Chrysanthemum.jpg");
+                    bitmap = new Bitmap("Chrysanthemum.jpg");
                     wlength = 3;
                     hlength = 3;
                     NewGame();
@@ -192,7 +185,7 @@ namespace Puzzle
             catch (Exception exception)
             {
                 MessageBox.Show("Ошибка: " + exception.Message);
-                bitmap = new Bitmap(s[0] + "Chrysanthemum.jpg");
+                bitmap = new Bitmap("Chrysanthemum.jpg");
                 wlength = 3;
                 hlength = 3;
                 NewGame();
