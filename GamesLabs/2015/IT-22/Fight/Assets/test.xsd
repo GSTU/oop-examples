@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="position">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="x_int"/>
+              <xs:element name="y" type="y_int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="userhp" type="hp_user" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+<xs:simpleType name="x_int">
+   <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xs:simpleType name="y_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="hp_user">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="500"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
