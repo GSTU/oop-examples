@@ -11,7 +11,8 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="userhp" type="hp_user" />
+        <xs:element name="userhp" type="hp_type" />
+		<xs:element name="npchp" type="hp_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -27,7 +28,7 @@
       <xs:maxInclusive value="20"/>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="hp_user">
+  <xs:simpleType name="hp_type">
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="1"/>
       <xs:maxInclusive value="500"/>

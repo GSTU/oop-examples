@@ -36,18 +36,19 @@ public class CharacterControllerScript : MonoBehaviour
 		try
 		{
 
-			XmlReaderSettings booksSettings = new XmlReaderSettings(); 
-			booksSettings.Schemas.Add(null,Application.dataPath+"/test.xsd");
-			booksSettings.ValidationType = ValidationType.Schema; 
-			booksSettings.ValidationEventHandler += new ValidationEventHandler(booksSettingsValidationEventHandler);
-			XmlReader books = XmlReader.Create(Application.dataPath + "/options.xml", booksSettings);
-			while (books.Read()) { } 
+			XmlReaderSettings Settings = new XmlReaderSettings(); 
+			Settings.Schemas.Add(null,Application.dataPath+"/test.xsd");
+			Settings.ValidationType = ValidationType.Schema; 
+			Settings.ValidationEventHandler += new ValidationEventHandler(SettingsValidationEventHandler);
+			XmlReader XmlR = XmlReader.Create(Application.dataPath + "/options.xml", Settings);
+			while (XmlR.Read()) { } 
 			XmlDocument xDoc = new XmlDocument();
 			xDoc.Load (Application.dataPath + "/options.xml");
 			if(test)
 			{
 				transform.position=new Vector3(float.Parse(xDoc.DocumentElement.SelectSingleNode("position").ChildNodes[0].InnerText),float.Parse(xDoc.DocumentElement.SelectSingleNode("position").ChildNodes[1].InnerText));
 				characterHP=int.Parse(xDoc.DocumentElement.SelectSingleNode("userhp").InnerText);
+				Npc.npcHP=int.Parse(xDoc.DocumentElement.SelectSingleNode("npchp").InnerText);
 				text_debag="Xml load successful";
 			}
 			else text_debag="Xml value error";
@@ -58,7 +59,7 @@ public class CharacterControllerScript : MonoBehaviour
 			return;
 		}
 	}
-	public void booksSettingsValidationEventHandler(object sender, ValidationEventArgs e) 
+	public void SettingsValidationEventHandler(object sender, ValidationEventArgs e) 
 	{ 
 		if (e.Severity == XmlSeverityType.Warning) 
 		{ 
