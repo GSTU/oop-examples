@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" xmlns="urn:GameConfig-schema" elementFormDefault="qualified" targetNamespace="urn:GameConfig-schema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FieldSize">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="3"></xs:minInclusive>
+              <xs:maxInclusive value="13"></xs:maxInclusive>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CountWin">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="3"></xs:minInclusive>
+              <xs:maxInclusive value="6"></xs:maxInclusive>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="BackColor">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Green"/>
+              <xs:enumeration value="Pink"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
