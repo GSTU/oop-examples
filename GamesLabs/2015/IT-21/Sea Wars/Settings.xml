@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <buttonCoords>
+    <x>230</x>
+    <y>50</y>
+  </buttonCoords>
+  <fieldSize>10</fieldSize>
+  <language>rus</language>
+</config>
