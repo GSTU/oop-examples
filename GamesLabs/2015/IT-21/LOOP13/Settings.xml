@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <pike>
+    <speed>3</speed>
+    <vision>80</vision>
+  </pike>
+  <carp>
+    <speed>1</speed>
+    <vision>100</vision>
+  </carp>
+</config>
