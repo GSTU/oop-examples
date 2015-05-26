@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<setting xmlns="urn:GameConfig-schema">
+  <GameSetting>
+    <SizeField>5</SizeField>
+    <Count>3</Count>
+    <Color>
+      <ColorZero>Orange</ColorZero>
+      <ColorCross>Violet</ColorCross>
+      <ColorLineWin>Blue</ColorLineWin>
+    </Color>
+      </GameSetting>  
+</setting>
