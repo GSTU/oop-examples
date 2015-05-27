@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+<level>Слабый</level>
+  <pathKrest>Krest Red.png</pathKrest>
+  <pathNol>Nol Green.png</pathNol>
+<size>
+<x>50</x>
+<y>50</y>
+</size>
+<xod>Человек</xod>
+</config>
