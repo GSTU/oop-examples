@@ -65,6 +65,9 @@ namespace Mine_Sweeper
             size = config.FieldSize;
             cellSize = config.CellSize;
 
+            if (minesCount > size * size)
+                minesCount = size * size;
+           
             InitializeComponent();
 
             Startup();
