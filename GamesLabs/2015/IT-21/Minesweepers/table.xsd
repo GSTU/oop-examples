@@ -1,0 +1,55 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="level" maxOccurs="3" minOccurs="3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="height">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="28"></xs:minInclusive>
+                  <xs:maxInclusive value="28"></xs:maxInclusive>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+              <xs:element name="weight">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="28"></xs:minInclusive>
+                  <xs:maxInclusive value="28"></xs:maxInclusive>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+              <xs:element name="countOfMines">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="1"></xs:minInclusive>
+                  <xs:maxInclusive value="110"></xs:maxInclusive>
+                </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countHeight">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="10"></xs:minInclusive>
+                  <xs:maxInclusive value="16"></xs:maxInclusive>
+                </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countWeight">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="10"></xs:minInclusive>
+                  <xs:maxInclusive value="110"></xs:maxInclusive>
+                </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:integer" name="power" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
