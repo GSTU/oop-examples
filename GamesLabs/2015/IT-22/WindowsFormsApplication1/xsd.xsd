@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="level" type="level_string" />
+        <xs:element name="pathKrest" type="pathKrest_string" />
+        <xs:element name="pathNol" type="pathNol_string" />
+        <xs:element name="size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="x_int"/>
+              <xs:element name="y" type="y_int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="xod" type="xod_string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+<xs:simpleType name="x_int">
+   <xs:restriction base="xs:integer">
+      <xs:minInclusive value="20"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xs:simpleType name="y_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="20"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xs:simpleType name="level_string">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Слабый"/>
+    <xs:enumeration value="Сильный"/>
+  </xs:restriction>
+</xs:simpleType>
+  <xs:simpleType name="xod_string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Человек"/>
+      <xs:enumeration value="Компьютер"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="pathKrest_string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Krest.png"/>
+      <xs:enumeration value="Krest Green.png"/>
+      <xs:enumeration value="Krest Red.png"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="pathNol_string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nol.png"/>
+      <xs:enumeration value="Nol Green.png"/>
+      <xs:enumeration value="Nol Red.png"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
