@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<setting xmlns="urn:GameConfig-schema">
+  <GameSetting>
+    <Count>6</Count>
+    <Level>
+      <Level1>1.jpg</Level1>
+      <Level2>2.jpg</Level2>
+      <Level3>3.jpg</Level3>
+  </Level>
+  </GameSetting>
+</setting>
