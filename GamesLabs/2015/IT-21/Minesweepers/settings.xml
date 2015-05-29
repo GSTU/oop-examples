@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<level power="0">
+		<height>28</height>
+		<weight>28</weight>
+		<countOfMines>10</countOfMines>
+		<countHeight>10</countHeight>
+		<countWeight>10</countWeight>
+	</level>
+	<level power="1">
+		<height>28</height>
+		<weight>28</weight>
+		<countOfMines>40</countOfMines>
+		<countHeight>16</countHeight>
+		<countWeight>16</countWeight>
+	</level>
+	<level power="2">
+		<height>28</height>
+		<weight>28</weight>
+		<countOfMines>99</countOfMines>
+		<countHeight>16</countHeight>
+		<countWeight>30</countWeight>
+	</level>
+</settings>
