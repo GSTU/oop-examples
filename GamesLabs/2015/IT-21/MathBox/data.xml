@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <config name="params">
+    <record name="r0">
+      <points>100</points>
+      <time>00:00:20</time>
+    </record>
+    <record name="r1">
+      <points>150</points>
+      <time>00:00:30</time>
+    </record>
+    <record name="r2">
+      <points>200</points>
+      <time>00:00:40</time>
+    </record>
+    <record name="r3">
+      <points>250</points>
+      <time>00:00:50</time>
+    </record>
+    <record name="r4">
+      <points>300</points>
+      <time>00:01:00</time>
+    </record>
+      <record name="r5">
+      <points>350</points>
+      <time>00:01:20</time>
+    </record>
+    <record name="r6">
+      <points>400</points>
+      <time>00:01:40</time>
+    </record>
+    <record name="r7">
+      <points>450</points>
+      <time>00:01:50</time>
+    </record>
+    <record name="r8">
+      <points>500</points>
+      <time>00:01:55</time>
+    </record>
+    <record name="r9">
+      <points>550</points>
+      <time>00:02:00</time>
+    </record>
+    <record name="r10">
+      <points>600</points>
+      <time>00:02:10</time>
+    </record>
+    <record name="r11">
+      <points>650</points>
+      <time>00:02:20</time>
+    </record>
+    <record name="r12">
+      <points>700</points>
+      <time>00:02:30</time>
+    </record>
+    <record name="r13">
+      <points>750</points>
+      <time>00:02:40</time>
+    </record>
+    <record name="r14">
+      <points>800</points>
+      <time>00:02:10</time>
+    </record>
+    <record name="r15">
+      <points>850</points>
+      <time>00:02:20</time>
+    </record>
+    <record name="r16">
+      <points>900</points>
+      <time>00:02:30</time>
+    </record>
+    <record name="r17">
+      <points>950</points>
+      <time>00:02:40</time>
+    </record>
+    <record name="r18">
+      <points>1000</points>
+      <time>00:02:50</time>
+    </record>
+    <record name="r19">
+      <points>2222</points>
+      <time>00:03:33</time>
+    </record>
+  </config>
+</root>
