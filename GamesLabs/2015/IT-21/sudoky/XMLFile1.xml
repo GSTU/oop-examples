@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--для игрового поля-->
+<config name="gamefield">
+  <backgroundColor>Lavender</backgroundColor>
+  <forecolor>LightCoral</forecolor>
+</config>
+  <!--для кнопки-->
+  <but>Mistral</but>
+  <butcolor>Black</butcolor>
+  <x>857</x>
+  <y>570</y>
+</root>
