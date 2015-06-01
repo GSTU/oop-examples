@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <swsize>
+    <x>600</x>
+    <y>300</y>
+  </swsize>
+  <lettercolor>White</lettercolor>
+  <themecolor>Blue</themecolor>
+</config>
