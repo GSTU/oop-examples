@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <backgroundColor>
+    <R>0</R>
+    <G>255</G>
+    <B>255</B>
+  </backgroundColor>
+  <victoryCondition>4</victoryCondition>
+  <sizeCell>
+    <x>8</x>
+    <y>8</y>
+  </sizeCell>
+</config>
