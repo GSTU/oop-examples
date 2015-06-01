@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="backgroundColor">
+          <xs:complexType>
+          <xs:sequence>
+            <xs:element name="R" type="R_int"/>
+            <xs:element name="G" type="G_int"/>
+            <xs:element name="B" type="B_int"/>
+          </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="victoryCondition" type="victory_int"/>
+        <xs:element name="sizeCell">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="x_int"/>
+              <xs:element name="y" type="y_int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="R_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="G_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="B_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="victory_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="3"/>
+      <xs:maxInclusive value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+    
+  <xs:simpleType name="x_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="5"/>
+      <xs:maxInclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="y_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="5"/>
+      <xs:maxInclusive value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
