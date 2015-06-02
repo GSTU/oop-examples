@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="configSchema.xsd">
+  <color>
+    <fieldColor>#FF5F9EA0</fieldColor>
+    <missColor>#FF0000FF</missColor>
+    <popColor>#FFFFFF00</popColor>
+    <killColor>#FFFF0000</killColor>
+  </color>
+  <startNumber>0</startNumber>
+  <bgImage>2</bgImage>
+</config>
