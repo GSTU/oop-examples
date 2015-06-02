@@ -9,9 +9,9 @@
      </gameField>
      <CurrentStepColor>1</CurrentStepColor>
      <CurrentNumberOfSteps>1</CurrentNumberOfSteps>
-     <CLearBgImage>..//..//ClearBG.jpg</CLearBgImage>
-     <WhiteCRImage>..//..//WhiteCR50.jpg</WhiteCRImage>
-     <BlackCRImage>..//..//BlackCR50.jpg</BlackCRImage>
+     <CLearBgImage>ClearBG.jpg</CLearBgImage>
+     <WhiteCRImage>WhiteCR50.jpg</WhiteCRImage>
+     <BlackCRImage>BlackCR50.jpg</BlackCRImage>
   </config>
   <config name="config2" >
      <gameField>
@@ -22,9 +22,9 @@
      </gameField>
      <CurrentStepColor>1</CurrentStepColor>
      <CurrentNumberOfSteps>1</CurrentNumberOfSteps>
-     <CLearBgImage>..//..//ClearBG.jpg</CLearBgImage>
-     <WhiteCRImage>..//..//WhiteCR50.jpg</WhiteCRImage>
-     <BlackCRImage>..//..//BlackCR50.jpg</BlackCRImage>
+     <CLearBgImage>ClearBG.jpg</CLearBgImage>
+     <WhiteCRImage>WhiteCR50.jpg</WhiteCRImage>
+     <BlackCRImage>BlackCR50.jpg</BlackCRImage>
   </config>
   
 </root>

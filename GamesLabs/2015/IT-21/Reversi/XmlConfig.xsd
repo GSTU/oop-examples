@@ -9,10 +9,10 @@
               <xs:element name="gameField">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="LeftSide" type="xs:string" />
-                    <xs:element name="RightSide" type="xs:unsignedByte" />
+                    <xs:element name="LeftSide" type="lb_int" />
+                    <xs:element name="RightSide" type="rt_int" />
                     <xs:element name="TopSide" type="xs:unsignedByte" />
-                    <xs:element name="BottomSide" type="xs:byte" />
+                    <xs:element name="BottomSide" type="lb_int" />
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -28,4 +28,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:simpleType name="lb_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-1"/>
+      <xs:maxInclusive value="-1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rt_int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2"/>
+      <xs:maxInclusive value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
 </xs:schema>

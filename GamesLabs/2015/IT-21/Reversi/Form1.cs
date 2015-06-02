@@ -807,68 +807,103 @@ namespace Реверси
                    WhiteCRImagePath = "",
                    BlackCRImagePath = "";
 
-                // my XmlDocument (in this case I will load from hardisk)
-                //XmlDocument xml = new XmlDocument();
-                // load the XSD schema.. is this right?
-                //xml.Schemas.Add("http://www.w3.org/2001/XMLSchema", "XmlConfig.xsd");
-
-                // Load my XML from hardisk
-                //xml.Load("XmlConfig.xml");
-
-                // event handler to manage the errors from XmlDocument object
-                //ValidationEventHandler veh = new ValidationEventHandler(verifyErrors);
-
-                // try to validate my XML.. and the event handler verifyError will show the error
-               // xml.Validate(veh);
-
-            XmlReaderSettings booksSettings = new XmlReaderSettings();
+            /*XmlReaderSettings booksSettings = new XmlReaderSettings();
             booksSettings.Schemas.Add("http://www.w3.org/2001/XMLSchema", "..//..//XmlConfig.xsd");
             booksSettings.ValidationType = ValidationType.Schema;
             booksSettings.ValidationEventHandler += new ValidationEventHandler(booksSettingsValidationEventHandler);
 
             XmlReader books = XmlReader.Create("XmlConfig.xml", booksSettings);
             isValid = true;
-            while (books.Read()) { } 
+            while (books.Read()) { } */
 
-            // Wenn EventHandler nicht ausgelöst wird bleibt isValid: true.                
 
-            if (isValid == true)
+            try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load("XmlConfig.xml");
-                foreach (System.Xml.XmlNode node in doc.DocumentElement)
+
+
+                XmlReaderSettings xmlreadersettings = new XmlReaderSettings();
+                xmlreadersettings.Schemas.Add(null, "XmlConfig.xsd");
+                xmlreadersettings.ValidationType = ValidationType.Schema;
+                xmlreadersettings.ValidationEventHandler += new ValidationEventHandler(ConfigsSettingsValidationEventHandler);
+                XmlReader xmlreader = XmlReader.Create("XmlConfig.xml", xmlreadersettings);
+                isValid = true;
+                while (xmlreader.Read()) { }        
+
+                if (isValid == true)
                 {
-                    if (node.Attributes[0].Value == conf)
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load("XmlConfig.xml");
+                    foreach (System.Xml.XmlNode node in doc.DocumentElement)
                     {
-                        LeftSide = int.Parse(node["gameField"]["LeftSide"].InnerText);
-                        RightSide = int.Parse(node["gameField"]["RightSide"].InnerText);
-                        TopSide = int.Parse(node["gameField"]["TopSide"].InnerText);
-                        BottomSide = int.Parse(node["gameField"]["BottomSide"].InnerText);
-                        CurrentStepColor = int.Parse(node["CurrentStepColor"].InnerText);
-                        CurrentNumberOfSteps = int.Parse(node["CurrentNumberOfSteps"].InnerText);
-                        ClearBgImagePath = node["CLearBgImage"].InnerText;
-                        WhiteCRImagePath = node["WhiteCRImage"].InnerText;
-                        BlackCRImagePath = node["BlackCRImage"].InnerText;
+                        if (node.Attributes[0].Value == conf)
+                        {
+                            LeftSide = int.Parse(node["gameField"]["LeftSide"].InnerText);
+                            RightSide = int.Parse(node["gameField"]["RightSide"].InnerText);
+                            TopSide = int.Parse(node["gameField"]["TopSide"].InnerText);
+                            BottomSide = int.Parse(node["gameField"]["BottomSide"].InnerText);
+                            CurrentStepColor = int.Parse(node["CurrentStepColor"].InnerText);
+                            CurrentNumberOfSteps = int.Parse(node["CurrentNumberOfSteps"].InnerText);
+                            ClearBgImagePath = node["CLearBgImage"].InnerText;
+                            WhiteCRImagePath = node["WhiteCRImage"].InnerText;
+                            BlackCRImagePath = node["BlackCRImage"].InnerText;
 
+                            switch (conf)
+                            {
+                                case "config1": menuStrip1.Items.Find("x4ToolStripMenuItem", true).First().Text = RightSide.ToString() + "X" + TopSide.ToString();
+                                    break;
+                                case "config2": menuStrip1.Items.Find("toolStripMenuItem2", true).First().Text = RightSide.ToString() + "X" + TopSide.ToString();
+                                    break;
+                                default: menuStrip1.Items.Find("x4ToolStripMenuItem", true).First().Text = RightSide.ToString() + "X" + TopSide.ToString();
+                                    break;
+                            }
+
+
+                        }
+                        else
+                        {
+                            int right = int.Parse(node["gameField"]["RightSide"].InnerText);
+                            int top = int.Parse(node["gameField"]["TopSide"].InnerText);
+                            if (conf == "config1") menuStrip1.Items.Find("toolStripMenuItem2", true).First().Text = right.ToString() + "X" + top.ToString();
+                            else
+                                menuStrip1.Items.Find("x4ToolStripMenuItem", true).First().Text = right.ToString() + "X" + top.ToString();
+                        }
                     }
-                }
-                ClearBgImage = new Bitmap(ClearBgImagePath);
-                WhiteCRImage = new Bitmap(WhiteCRImagePath);
-                BlackCRImage = new Bitmap(BlackCRImagePath);
+                    ClearBgImage = new Bitmap(ClearBgImagePath);
+                    WhiteCRImage = new Bitmap(WhiteCRImagePath);
+                    BlackCRImage = new Bitmap(BlackCRImagePath);
 
-                mas = new int[RightSide, TopSide];
+                    mas = new int[RightSide, TopSide];
+
+                }
+                else
+                {
+                    LeftSide = -1;
+                    RightSide = 4;
+                    TopSide = 4;
+                    BottomSide = -1;
+                    CurrentStepColor = 1;
+                    CurrentNumberOfSteps = 1;
+                    ClearBgImagePath = "ClearBG.jpg";
+                    WhiteCRImagePath = "WhiteCR50.jpg";
+                    BlackCRImagePath = "BlackCR50.jpg";
+                    ClearBgImage = new Bitmap(ClearBgImagePath);
+                    WhiteCRImage = new Bitmap(WhiteCRImagePath);
+                    BlackCRImage = new Bitmap(BlackCRImagePath);
+                    mas = new int[RightSide, TopSide];
+                }
             }
-            else
+            catch (Exception exception)
             {
+                MessageBox.Show("Ошибка: " + exception.Message);
                 LeftSide = -1;
                 RightSide = 4;
                 TopSide = 4;
                 BottomSide = -1;
                 CurrentStepColor = 1;
                 CurrentNumberOfSteps = 1;
-                ClearBgImagePath = "../../ClearBG.jpg";
-                WhiteCRImagePath = "../../WhiteCR50.jpg";
-                BlackCRImagePath = "../../BlackCR50.jpg";
+                ClearBgImagePath = "ClearBG.jpg";
+                WhiteCRImagePath = "WhiteCR50.jpg";
+                BlackCRImagePath = "BlackCR50.jpg";
                 ClearBgImage = new Bitmap(ClearBgImagePath);
                 WhiteCRImage = new Bitmap(WhiteCRImagePath);
                 BlackCRImage = new Bitmap(BlackCRImagePath);
@@ -876,18 +911,18 @@ namespace Реверси
             }
           
         }
-        static void booksSettingsValidationEventHandler(object sender, ValidationEventArgs e)
+        static void ConfigsSettingsValidationEventHandler(object sender, ValidationEventArgs e)
         {
             if (e.Severity == XmlSeverityType.Warning)
             {
                 isValid = false;
-                MessageBox.Show("WARNING: ");
+                MessageBox.Show("Предупреждение! ");
                 
             }
             else if (e.Severity == XmlSeverityType.Error)
             {
                 isValid = false;
-                MessageBox.Show("ERROR: ");
+                MessageBox.Show("Ошибка чтения данных из XML файла!!! Загружается стандартная конфигруация");
                
             }
         }
