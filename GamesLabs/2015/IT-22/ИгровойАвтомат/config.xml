@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="configSchema.xsd">
+  <startMoney>150</startMoney>
+  <colorBack>#FFFF00FF</colorBack>
+  <color>
+    <c1>#FF5F9EA0</c1>
+    <c2>#FF0000FF</c2>
+    <c3>#FFFFFF00</c3>
+  </color>
+</config>
