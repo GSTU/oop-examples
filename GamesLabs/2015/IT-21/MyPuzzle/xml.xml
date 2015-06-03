@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+<level>Любитель</level>
+<path>Snowwhite.jpg</path>
+<size>
+<x>15</x>
+<y>10</y>
+</size>
+<result>40 c.</result>
+</config>
