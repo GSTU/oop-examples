@@ -1,1 +1,1 @@
-Привалов Сергей ИТ-22
+Privalov Sergey IT-22
