@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="range" type="Range"></xs:element>
+        <xs:element name="size" type="Size"></xs:element>
+        <xs:element name="color" type="Filter"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="Range">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"></xs:minInclusive>
+      <xs:maxInclusive value="5"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sz">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="48"></xs:minInclusive>
+      <xs:maxInclusive value="192"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="Size">
+    <xs:sequence>
+      <xs:element name="x" type="sz"></xs:element>
+      <xs:element name="y" type="sz"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Filter">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="#[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
