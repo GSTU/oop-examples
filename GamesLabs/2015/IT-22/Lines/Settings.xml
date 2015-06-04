@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <glob>
+    <NamePlayer>ваоовв</NamePlayer>
+    <score>200</score>
+  </glob>
+  <interval>40</interval>
+  <size>40</size>
+</config>
