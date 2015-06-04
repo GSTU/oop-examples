@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="XMLSchema1.xsd">
+  <sizeSqr>50</sizeSqr>
+  <color>
+    <c1>#FF5F9EA0</c1>
+    <c2>#FFFCDA96</c2>
+    <c3>#FFFFFFFF</c3>
+  </color>  
+</config>
