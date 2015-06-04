@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="XMLSchema1.xsd">
+  <range>3</range>
+  <size>
+    <x>48</x>
+    <y>48</y>
+  </size>
+  <color>#FF5F9EA0</color>
+
+</config>
