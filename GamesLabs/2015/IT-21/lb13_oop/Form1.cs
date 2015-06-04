@@ -33,9 +33,9 @@ namespace lb13_oop
             valid = true;
             move = false;
             XmlDocument doc = new XmlDocument();
-            doc.Load(@"rrr.xml");
+            doc.Load(@"config.xml");
             XmlSchemaSet schemas = new XmlSchemaSet();
-             doc.Schemas.Add("", "rrr.xsd");
+             doc.Schemas.Add("", "config.xsd");
             ValidationEventHandler eventHandler = new ValidationEventHandler(ValidationEventHandler);
             doc.Validate(eventHandler);
             if (valid)
