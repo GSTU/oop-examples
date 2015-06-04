@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="color" type="string" />
+        <xs:element name="tick" type="tick_int"/>
+        <xs:element name="Position">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="int"/>
+              <xs:element name="y" type="int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="string">
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="Orange"/>
+      <xs:enumeration value="Red"/>
+      <xs:enumeration value="Blue"/>
+      <xs:enumeration value="Black"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tick_int">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="10"/>
+      <xs:maxInclusive value="200"/>
+    </xs:restriction>
+   </xs:simpleType>
+  <xs:simpleType name="int">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

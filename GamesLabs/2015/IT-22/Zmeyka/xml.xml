@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<options>
+    <color>Orange</color>
+  <tick>150</tick>
+    <Position>
+       <x>50</x>
+       <y>50</y>
+    </Position>
+  
+</options>
