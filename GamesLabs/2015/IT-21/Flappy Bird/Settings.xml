@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <sceneSettings>
+    <groundLevel>120</groundLevel>
+  </sceneSettings>
+  <gameplaySettings>
+    <holeSize>140</holeSize>
+    <playerSize>40</playerSize>
+  </gameplaySettings>
+</root>
