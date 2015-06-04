@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <backgroundim>im1.png</backgroundim>
+  <button>
+      <fontsize>20</fontsize>
+      <fontname></fontname>    
+  </button>
+  <soundtrack>sound.mp3</soundtrack>
+</root>
