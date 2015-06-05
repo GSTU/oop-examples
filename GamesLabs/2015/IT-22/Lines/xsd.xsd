@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="glob">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NamePlayer"  type="xs:string"/>
+              <xs:element name="score" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="interval"  type="xs:int"/>
+        <xs:element name="size" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
