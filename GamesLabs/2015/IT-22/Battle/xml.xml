@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <player>
+    <attack>3</attack>
+    <health>80</health>
+  </player>
+  <ai>
+    <attack>1</attack>
+    <health>100</health>
+  </ai>
+</config>
