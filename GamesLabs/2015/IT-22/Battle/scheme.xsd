@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attack"  type="xs:integer"/>
+              <xs:element name="health" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ai">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attack"  type="xs:integer"/>
+              <xs:element name="health" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+</xs:schema>
