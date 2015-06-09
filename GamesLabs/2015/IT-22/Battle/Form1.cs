@@ -14,13 +14,15 @@ namespace battle
 {
     public partial class Form1 : Form
     {
-        
+
+        private bool flag = true;
         private int protectStat = 0;
         private int attackStat = 0;
         Game currentGame;
         Player user;
         Player ai;
         Config config;
+        Config standart = new Config(new GameConfig(10, 100), new GameConfig(10, 100),Color.CadetBlue);
         public Form1()
         {
             InitializeComponent();
@@ -28,31 +30,43 @@ namespace battle
 
             try
             {
+                
                 if ((System.IO.File.Exists("scheme.xsd")))
                 {
+                    
                     XmlReaderSettings xmlreadersettings = new XmlReaderSettings();
-
+                    //MessageBox.Show("1");
                     xmlreadersettings.Schemas.Add(null, "scheme.xsd");
-
+                    //MessageBox.Show("2");
                     xmlreadersettings.ValidationType = ValidationType.Schema;
                     xmlreadersettings.ValidationEventHandler += new ValidationEventHandler(ValidateXML);
-
+                    //MessageBox.Show("3");
                     XmlReader xmlreader = XmlReader.Create("xml.xml", xmlreadersettings);
-                    while (xmlreader.Read()) { }
+                    while (xmlreader.Read())
+                    {  }
                 }
                 else
+                {
                     throw new System.IO.FileNotFoundException();
+                    
+                }
 
 
                 if (flag)
+                {
                     config = new XMLWithDOM("xml.xml").GetConfig();
+                    MessageBox.Show("h");
+                }
                 else
+                {
+                    
                     throw new Exception();
+                }
             }
-            catch
+            catch (Exception e)
             {
-                config = new Config(new GameConfig(10, 100),
-                                    new GameConfig(10, 100));
+                MessageBox.Show(e.Message);
+                config = standart;
             }
         }
 
@@ -72,7 +86,7 @@ namespace battle
         }
 
 
-        private bool flag = true;
+        
         private void ValidateXML(object sender, ValidationEventArgs e)
         {
             if (e.Severity == XmlSeverityType.Warning)
@@ -95,10 +109,12 @@ namespace battle
             ai = new Player(pictureBox2, 100);
             currentGame = new Game(user, ai, richTextBox1);
             currentGame.NewGame();
+            //checkConfig();
             ai.Health = config.AiConfig.Health;
             ai.Attack = config.AiConfig.Attack;
             user.Health = config.PlayerConfig.Health;
             user.Attack = config.PlayerConfig.Attack;
+            BackColor = config.Bgcolor;
             pictureBox1 = currentGame.PlayerFotoBox;
             pictureBox2 = currentGame.AIFotoBox;
             HealthEnemy.Text = ai.Health.ToString();
@@ -193,7 +209,20 @@ namespace battle
                 MessageBox.Show("Ты выиграл!");
                 NewGame();
             }
+
+            
         }
+        //public void checkConfig()
+        //{
+        //    if (config.AiConfig.Attack >= int.MaxValue || config.AiConfig.Health >= int.MaxValue || config.PlayerConfig.Attack >= int.MaxValue || config.PlayerConfig.Health>=int.MaxValue)
+        //    {
+        //        config=standart;
+        //    }
+        //    if (config.AiConfig.Attack <= 0 || config.AiConfig.Health <= 0 || config.PlayerConfig.Attack <= 0 || config.PlayerConfig.Health <= 0)
+        //    {
+        //        config = standart;
+        //    }
+        //}
 
 
     }

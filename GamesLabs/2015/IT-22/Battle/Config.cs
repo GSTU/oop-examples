@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace battle
 {
@@ -10,11 +11,14 @@ namespace battle
     {
         public GameConfig PlayerConfig;
         public GameConfig AiConfig;
+        public Color Bgcolor;
+        
 
-        public Config(GameConfig player, GameConfig ai)
+        public Config(GameConfig player, GameConfig ai, Color bgcolor)
         {
             PlayerConfig = player;
             AiConfig = ai;
+            Bgcolor = bgcolor;
         }
 
         //public override string ToString()
