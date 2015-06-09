@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attack"  type="int"/>
+              <xs:element name="health" type="int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ai">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attack"  type="int"/>
+              <xs:element name="health" type="int"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		<xs:element name="bgcolor" type="color" />
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+	
+	<xs:simpleType name="color">
+    <xs:restriction base="xs:Name">
+	<xs:enumeration value="Orange"/>
+      <xs:enumeration value="Red"/>
+      <xs:enumeration value="Blue"/>
+      <xs:enumeration value="Black"/>
+	  <xs:enumeration value="Green"/>
+	  <xs:enumeration value="CadetBlue"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="int">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="32767"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+ 
+  
+</xs:schema>
