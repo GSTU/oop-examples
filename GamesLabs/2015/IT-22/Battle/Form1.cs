@@ -55,7 +55,7 @@ namespace battle
                 if (flag)
                 {
                     config = new XMLWithDOM("xml.xml").GetConfig();
-                    MessageBox.Show("h");
+                    //MessageBox.Show("h");
                 }
                 else
                 {

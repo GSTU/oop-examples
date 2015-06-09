@@ -25,9 +25,9 @@ namespace battle
 
         public void NewGame()
         {
-            _playerFotoBox.Image = Image.FromFile("1.png");
+            _playerFotoBox.Image = Image.FromFile("resources/1.png");
             _playerFotoBox.SizeMode = PictureBoxSizeMode.Zoom;
-            _aIFotoBox.Image = Image.FromFile("2.png");
+            _aIFotoBox.Image = Image.FromFile("resources/2.png");
             _aIFotoBox.SizeMode = PictureBoxSizeMode.Zoom;
             _log.Text = "Начало новой игры\n"+_log.Text;
         }
