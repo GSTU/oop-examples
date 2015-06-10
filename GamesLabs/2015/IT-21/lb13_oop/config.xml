@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Block> 
+<player>
+ <width> 40</width>
+ <height>40</height>
+ <x>320</x>
+ <y>320</y>
+ <speed>1</speed>
+</player>
+
+<box>
+ <width> 100qf</width>
+ <height>20</height>
+ <x>10</x>
+ <y>10</y>
+ <speed>1</speed>
+</box>
+
+<box>
+ <width> 90</width>
+ <height>90</height>
+ <x>600</x>
+ <y>10</y>
+ <speed>-1</speed>
+</box>
+
+<box>
+ <width>30</width>
+ <height>100</height>
+ <x>10</x>
+ <y>500</y>
+ <speed>-1</speed>
+</box>
+
+<box>
+ <width> 80</width>
+ <height>100</height>
+ <x>500</x>
+ <y>500</y>
+ <speed>1</speed>
+</box>
+
+<box>
+ <width> 80</width>
+ <height>100</height>
+ <x>200</x>
+ <y>500</y>
+ <speed>1</speed>
+</box>
+</Block>
