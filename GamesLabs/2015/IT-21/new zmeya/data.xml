@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <gameField>
+    <x>20</x>
+    <y>1</y>
+    <x1>20</x1>
+    <y1>2</y1>
+    <x2>20</x2>
+    <y2>3</y2>
+  </gameField>
+  <backgroundColor>Red</backgroundColor>
+</config>
