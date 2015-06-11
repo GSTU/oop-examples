@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sceneSettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="groundLevel" type="gl"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="gameplaySettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="holeSize" type="hs"/>
+              <xs:element name="playerSize" type="ps"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+  <xs:simpleType name="gl">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="100"/>
+      <xs:maxInclusive value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="hs">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="130"/>
+      <xs:maxInclusive value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ps">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="25"/>
+      <xs:maxInclusive value="55"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
