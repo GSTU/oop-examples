@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Block> 
 <player>
- <width> 40</width>
+ <width>40</width>
  <height>40</height>
  <x>320</x>
  <y>320</y>
@@ -9,7 +9,7 @@
 </player>
 
 <box>
- <width> 100qf</width>
+ <width> 100</width>
  <height>20</height>
  <x>10</x>
  <y>10</y>
