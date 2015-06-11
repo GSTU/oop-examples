@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" xmlns="urn:GameConfig-schema" elementFormDefault="qualified" targetNamespace="urn:GameConfig-schema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="setting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GameSetting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FormColor">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="gameover1.png"/>
+                  <xs:enumeration value="gameover2.png"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+              <xs:element name="BackgroundColor">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Color1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Green.png"/>
+                        <xs:enumeration value="Yellow.png"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
