@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="count" type="Count"></xs:element>
+        <xs:element name="colorNumber" type="Asd"></xs:element>
+        <xs:element name="color" type="Color"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="Count">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"></xs:minInclusive>
+      <xs:maxInclusive value="5"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Asd">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"></xs:minInclusive>
+      <xs:maxInclusive value="2"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Color">
+    <xs:sequence>
+      <xs:element name="c1" type="Filter"></xs:element>
+      <xs:element name="c2" type="Filter"></xs:element>
+      <xs:element name="c3" type="Filter"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Filter">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="#[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
