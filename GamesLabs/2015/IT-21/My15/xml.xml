@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <settings>
+    <s>0</s>
+    <m>0</m>
+  </settings>
+  <button1fontname>arial</button1fontname>
+  <buttoncolor>Orange</buttoncolor>
+</config>
