@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  
+    <BallSpeed>3</BallSpeed>
+    <timer_Moveball>1</timer_Moveball>
+    <timer_Enemy>1</timer_Enemy>
+    <Speed_Enemy>1</Speed_Enemy>
+    <Speed_Player>1</Speed_Player>
+  
+    <color name="namecolor">
+      <pb_Player>Black</pb_Player>
+      <pb_Enemy>White</pb_Enemy>
+      <pb_Ball>Red</pb_Ball>
+      <WorldFrame>Blue</WorldFrame>         
+    </color>
+
+</root>
