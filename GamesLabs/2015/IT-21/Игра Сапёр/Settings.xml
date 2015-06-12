@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <game>
+    <minesCount>40</minesCount>
+    <fieldSize>16</fieldSize>
+  </game>
+  <window>
+    <cellSize>50</cellSize>
+  </window>
+  <closedKletkaColor>Gray</closedKletkaColor>
+</config>

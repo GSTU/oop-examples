@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="minesCount" type="mc"/>
+              <xs:element name="fieldSize" type="fs"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="window">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cellSize"  type="cs"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="closedKletkaColor" type="color" />
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+  <xs:simpleType name="mc">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fs">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="3"/>
+      <xs:maxInclusive value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="cs">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="35"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="color">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Gray"/>
+      <xs:enumeration value="Green"/>
+      <xs:enumeration value="Violet"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
