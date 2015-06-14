@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <playerspeed>3</playerspeed>
+  <wallspeed>8</wallspeed>
+  <colors>
+    <player>Red</player>
+    <wall>Black</wall>
+  </colors>
+</root>

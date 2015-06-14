@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="playerspeed" type="ps" />
+        <xs:element name="wallspeed" type="ws"/>
+        <xs:element name="colors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="player" type="color"/>
+              <xs:element name="wall" type="color"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+  <xs:simpleType name="ps">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ws">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="3"/>
+      <xs:maxInclusive value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="color">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Black"/>
+      <xs:enumeration value="Red"/>
+      <xs:enumeration value="Blue"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
