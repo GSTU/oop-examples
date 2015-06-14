@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" xmlns="urn:GameConfig-schema" elementFormDefault="qualified" targetNamespace="urn:GameConfig-schema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="setting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GameSetting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ColorField">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Green"/>
+                    <xs:enumeration value="CornflowerBlue"/>
+                    <xs:enumeration value="Chartreuse"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ColorSetka">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="DarkOliveGreen"/>
+                    <xs:enumeration value="DarkGreen"/>
+                    <xs:enumeration value="Coral"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ColorFigure">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Color1" type="xs:string" />
+                    <xs:element name="Color2" type="xs:string" />
+                    <xs:element name="Color3" type="xs:string" />
+                    <xs:element name="Color4" type="xs:string" />
+                    <xs:element name="Color5" type="xs:string" />
+                    <xs:element name="Color6" type="xs:string" />
+                    <xs:element name="Color7" type="xs:string" />
+                    <xs:element name="Color8" type="xs:string" />
+                    <xs:element name="Color9" type="xs:string" />
+                    <xs:element name="Color10" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

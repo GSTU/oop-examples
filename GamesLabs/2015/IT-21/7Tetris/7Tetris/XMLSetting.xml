@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<setting xmlns="urn:GameConfig-schema">
+  <GameSetting>
+    <ColorField>CornflowerBlue</ColorField>
+    <ColorSetka>DarkOliveGreen</ColorSetka> 
+    <ColorFigure>
+      <Color1>Orange</Color1>
+      <Color2>Violet</Color2>
+      <Color3>Blue</Color3>
+      <Color4>Azure</Color4>
+      <Color5>Red</Color5>
+      <Color6>Tomato</Color6>
+      <Color7>Firebrick</Color7>
+      <Color8>FloralWhite</Color8>
+      <Color9>BlueViolet</Color9>
+      <Color10>Yellow</Color10>
+    </ColorFigure>
+  </GameSetting>
+</setting>
+
