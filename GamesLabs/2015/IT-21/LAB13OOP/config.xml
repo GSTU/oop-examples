@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<Block>
+<player_one>
+   <height>8</height>
+    <color>Red</color>
+ </player_one>
+
+<player_two>
+   <height>4</height>
+    <color>Blue</color>
+ </player_two>
+
+<ball>
+   <height>1</height>
+    <color>Green</color>
+ </ball>
+</Block>
