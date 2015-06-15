@@ -55,6 +55,7 @@ namespace lb12_oop
         public void Draw()
         {
             Form1.g.FillEllipse(new SolidBrush(this.color), (float)this.x, (float)this.y, (float)this.R, (float)this.R);
+
         }
 
         public void move() {
@@ -69,11 +70,12 @@ namespace lb12_oop
             }
         }
 
-        public int loose() { 
-             if (this.x + speedX <= -Form1.formWidth / 2) {
+        public int loose() {
+            if (this.x + speedX <= -400)
+            {
                  return 1;
              }
-             if (this.x + this.R + speedX >= Form1.formWidth / 2) {
+             if (this.x + speedX >=400) {
                  return 2;
              }
              return 0;
@@ -95,17 +97,17 @@ namespace lb12_oop
         }
 
         public void  hittest(Player p1, Player p2){
-            if (this.x - this.R <= p1.X)
+            if (this.x - this.R-10 <= p1.X+p1.W)
             {
-                if (this.y + this.R<= p1.Y + p1.H && this.y - this.R >= p1.Y)
+                if (this.y<= p1.Y + p1.H && this.y>= p1.Y)
                 {
                     this.speedX *= -1.3;
                 }
             }
 
-            if (this.x + this.R >= p2.X)
+            if (this.x + this.R >= p2.X-p1.W)
             {
-                if (this.y + this.R <= p2.Y + p2.H && this.y - this.R >= p2.Y)
+                if (this.y <= p2.Y + p2.H && this.y  >= p2.Y)
                 {
                     this.speedX *= -1.3;
                 }

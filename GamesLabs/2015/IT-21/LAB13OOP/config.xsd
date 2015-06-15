@@ -6,7 +6,14 @@
         <xs:element name="player_one">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="height" type="xs:unsignedByte" />
+              <xs:element name="height">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="color" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
@@ -14,7 +21,14 @@
         <xs:element name="player_two">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="height" type="xs:unsignedByte" />
+              <xs:element name="height">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="color" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
@@ -22,7 +36,14 @@
         <xs:element name="ball">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="height" type="xs:unsignedByte" />
+              <xs:element name="height">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="color" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
