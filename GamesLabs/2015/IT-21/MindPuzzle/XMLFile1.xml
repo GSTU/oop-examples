@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <config name="params">
+    <timer name="time1">
+      <min>5</min>
+    </timer>
+    <timer name="time2">
+      <min>15</min>
+    </timer>
+    <timer name="time3">
+      <min>25</min>
+    </timer>
+  </config>
+  <labcolor>LightGreen</labcolor>
+</root>
