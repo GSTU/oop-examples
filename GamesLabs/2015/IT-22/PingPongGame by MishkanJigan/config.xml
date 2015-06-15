@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="configSchema.xsd">
+  <score>3</score>
+  <backColor>#FF5F9EA0</backColor>
+  <color>
+    <b1>#FF0000FF</b1>
+    <b2>#FFFFFF00</b2>
+  </color>
+  
+</config>
