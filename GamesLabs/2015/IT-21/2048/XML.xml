@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameSetting>
+  <GameTitle>Набери 2048!</GameTitle>
+  <GameColor name="GC">
+    <FormColor>gameover1.png</FormColor>
+    <BackgroundColor>Yellow.png</BackgroundColor>
+  </GameColor>
+  <GameConfig>
+    <Location>
+      <X>0</X>
+      <Y>500</Y>
+    </Location>
+    <Size>278</Size>
+  </GameConfig>
+</GameSetting>
