@@ -55,8 +55,13 @@ namespace lb12_oop
         }
 
         public void draw() { 
+
            SolidBrush b = new SolidBrush(this.color);
            Form1.g.FillRectangle(b, this.x, this.y, this.width, this.height);
+          // Form1.g.FillRectangle(new SolidBrush(Color.Aqua), this.x, this.y,5, 5);
+          // Form1.g.FillRectangle(new SolidBrush(Color.Aqua), this.x+this.W, this.y, 5, 5);
+         //  Form1.g.FillRectangle(new SolidBrush(Color.Aqua), -Form1.formWidth / 2, this.y, Form1.formWidth, 5);
+            
         }
 
         public void setStart() {

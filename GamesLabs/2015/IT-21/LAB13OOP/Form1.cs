@@ -40,15 +40,19 @@ namespace lb12_oop
 
             valid = true;
             XmlDocument doc = new XmlDocument();
-            doc.Load(@"config.xml");
-            XmlSchemaSet schemas = new XmlSchemaSet();
-            doc.Schemas.Add("", "config.xsd");
-            ValidationEventHandler eventHandler = new ValidationEventHandler(ValidationEventHandler);
-            doc.Validate(eventHandler);
             int height;
+            if (File.Exists(@"config.xml"))
+            {
+                doc.Load(@"config.xml");
+                XmlSchemaSet schemas = new XmlSchemaSet();
+                doc.Schemas.Add("", "config.xsd");
+                ValidationEventHandler eventHandler = new ValidationEventHandler(ValidationEventHandler);
+                doc.Validate(eventHandler);                
+            }else{
+                valid = false;
+            }
             this.size = formWidth / 50;
             g.TranslateTransform(formWidth / 2, formHight / 2);
-            
             if (valid)
             {
                 height = Convert.ToInt32(doc.GetElementsByTagName("player_one").Item(0).ChildNodes.Item(0).InnerText);
@@ -56,9 +60,10 @@ namespace lb12_oop
                 height = Convert.ToInt32(doc.GetElementsByTagName("player_two").Item(0).ChildNodes.Item(0).InnerText);
                 player2 = new Player(size, height * size, 375, 0, Color.FromName(doc.GetElementsByTagName("player_two").Item(0).ChildNodes.Item(1).InnerText));
                 height = Convert.ToInt32(doc.GetElementsByTagName("ball").Item(0).ChildNodes.Item(0).InnerText);
-                ball = new Ball(0, 0, height*size, Color.FromName(doc.GetElementsByTagName("ball").Item(0).ChildNodes.Item(1).InnerText), 9);
+                ball = new Ball(0, 0, height * size, Color.FromName(doc.GetElementsByTagName("ball").Item(0).ChildNodes.Item(1).InnerText), 9);
             }
-            else {
+            else
+            {
 
                 player1 = new Player(size, 8 * size, -390, 0, Color.Red);
                 player2 = new Player(size, 8 * size, 375, 0, Color.Blue);
@@ -112,6 +117,7 @@ namespace lb12_oop
 
         //функция отрисовки
         private void draw() {
+
             g.Clear(Color.White);//очистка поля
             ball.hittest(player1, player2);
             Pen p = new Pen(Color.Green, 1);
@@ -150,12 +156,17 @@ namespace lb12_oop
             }
             ball.move();
             int loose = ball.loose();
+
                 if (loose == 1){
                     label2.Text = Convert.ToString(Convert.ToInt16(label2.Text)+1);
+                    label11.Text = Convert.ToString(ball.X);
+                    label12.Text = Convert.ToString(ball.Y);
                     restart();
                 }
                 if (loose == 2){
                     label1.Text = Convert.ToString(Convert.ToInt16(label1.Text) + 1);
+                    label11.Text = Convert.ToString(ball.X);
+                    label12.Text = Convert.ToString(ball.Y);
                     restart();
                 }
             draw();
