@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1 {
     public partial class Form1:Form {
         Graphics graphics;
         Python python;
-        enum Mode { Game, Menu, GameOver, Start,Options};
+        enum Mode { Game, Menu, GameOver, Start, Options };
         private Mode mode=Mode.Start;
         private Point cursor;
         private int NextApple=0;
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1 {
             ExitButton.AddAction(this.Exit);
             this.gui.Add(StartButton);
             this.gui.Add(OptionsButton);
-            this.gui.Add(ExitButton); 
+            this.gui.Add(ExitButton);
         }
         private void GameOver() {
             this.mode=Mode.GameOver;
@@ -158,7 +158,7 @@ namespace WindowsFormsApplication1 {
         }
         private void NewGame() {
             this.mode=Mode.Game;
-            this.python=new Python(this.acceleration,this.speedIncrease);
+            this.python=new Python(this.acceleration, this.speedIncrease);
             this.Apples=new List<Apple>();
             this.Mangustos=new List<Mangusto>();
             this.NextApple=0;
@@ -189,14 +189,14 @@ namespace WindowsFormsApplication1 {
             this.graphics.DrawString("Time: "+(this.time/50).ToString()+"."+(this.time%50*2).ToString(), new Font(FontFamily.GenericMonospace, 12, FontStyle.Bold), new SolidBrush(Color.Yellow), new PointF(8, 28));
 
         }
-        public Graphics GetGraphics(){
+        public Graphics GetGraphics() {
             return this.graphics;
         }
         private void drawTitle() {
             int[] tx= { 32, 280, 160, 300, 350, 590, 680, 570, 750, 830, 740 };
             int[] ty= { 32, 32, 24, 40, 20, 20, 40, 130, 20, 40, 30 };
             int[] tx2= { 48, 200, 260, 400, 370, 600, 670, 690, 740, 830, 840 };
-            int[] ty2= { 256,256, 128, 20, 260, 260, 240, 110, 260, 240, 250 };
+            int[] ty2= { 256, 256, 128, 20, 260, 260, 240, 110, 260, 240, 250 };
             Pen title=new Pen(Color.Plum, 16);
             double ww=(double)this.windowWidth/(double)1024;
             double hh=(double)this.windowHeight/(double)768;
@@ -311,7 +311,7 @@ namespace WindowsFormsApplication1 {
                 this.menuControl();
                 this.drawTitle();
             } else if(mode==Mode.Game) {
-                this.gameControl();                
+                this.gameControl();
             } else if(mode==Mode.GameOver) {
                 this.menuControl();
             } else if(mode==Mode.Options) {
@@ -340,26 +340,26 @@ namespace WindowsFormsApplication1 {
         }
         private bool stop=false;
         private void readXml() {
-            XmlReaderSettings xmls = new XmlReaderSettings();
-            xmls.Schemas.Add(null, "Schema.xsd");
-            xmls.ValidationType = ValidationType.Schema;
-            xmls.ValidationEventHandler += new ValidationEventHandler(this.xmlHandler);
-            xmls.ValidationFlags |= XmlSchemaValidationFlags.ProcessInlineSchema;
-            xmls.ValidationFlags |= XmlSchemaValidationFlags.ProcessSchemaLocation;
-            xmls.ValidationFlags |= XmlSchemaValidationFlags.ReportValidationWarnings;
-            XmlReader settings = XmlReader.Create("settings.xml", xmls);
-            string currentElement="";
-            string currentValue="";
             bool rewrite=false;
             try {
+                XmlReaderSettings xmls = new XmlReaderSettings();
+                xmls.Schemas.Add(null, "Schema.xsd");
+                xmls.ValidationType = ValidationType.Schema;
+                xmls.ValidationEventHandler += new ValidationEventHandler(this.xmlHandler);
+                xmls.ValidationFlags |= XmlSchemaValidationFlags.ProcessInlineSchema;
+                xmls.ValidationFlags |= XmlSchemaValidationFlags.ProcessSchemaLocation;
+                xmls.ValidationFlags |= XmlSchemaValidationFlags.ReportValidationWarnings;
+                XmlReader settings = XmlReader.Create("settings.xml", xmls);
+                string currentElement="";
+                string currentValue="";
                 while(settings.Read()) {
-                    if(settings.NodeType==XmlNodeType.Element){
+                    if(settings.NodeType==XmlNodeType.Element) {
                         currentElement=settings.Name;
                     }
-                    if(settings.NodeType==XmlNodeType.Text){
+                    if(settings.NodeType==XmlNodeType.Text) {
                         currentValue=settings.Value;
                     }
-                    if(settings.NodeType==XmlNodeType.EndElement){
+                    if(settings.NodeType==XmlNodeType.EndElement) {
                         if(!this.stop) {
                             if(currentElement=="R") {
                                 this.options.ColorR=Convert.ToInt32(currentValue);
@@ -370,7 +370,7 @@ namespace WindowsFormsApplication1 {
                             } else if(currentElement=="Acceleration") {
                                 this.options.Acceleration=Convert.ToDouble(currentValue.Replace('.', ','));
                             } else if(currentElement=="Speed") {
-                                this.options.SpeedIncrease=Convert.ToDouble(currentValue.Replace('.',','));
+                                this.options.SpeedIncrease=Convert.ToDouble(currentValue.Replace('.', ','));
                             } else if(currentElement=="Spawn") {
                                 this.options.SpawnIncrease=Convert.ToDouble(currentValue.Replace('.', ','));
                             } else if(currentElement=="Width") {
@@ -382,17 +382,17 @@ namespace WindowsFormsApplication1 {
                             rewrite=true;
                             if(currentElement=="R") {
                                 this.options.ColorR=this.defaultSettings.ColorR;
-                            }else if(currentElement=="G") {
+                            } else if(currentElement=="G") {
                                 this.options.ColorG=this.defaultSettings.ColorG;
-                            }else if(currentElement=="B") {
+                            } else if(currentElement=="B") {
                                 this.options.ColorB=this.defaultSettings.ColorB;
-                            }else if(currentElement=="Acceleration") {
+                            } else if(currentElement=="Acceleration") {
                                 this.options.Acceleration=this.defaultSettings.Acceleration;
-                            }else if(currentElement=="Speed") {
+                            } else if(currentElement=="Speed") {
                                 this.options.SpeedIncrease=this.defaultSettings.SpeedIncrease;
-                            }else if(currentElement=="Spawn") {
+                            } else if(currentElement=="Spawn") {
                                 this.options.SpawnIncrease=this.defaultSettings.SpawnIncrease;
-                            }else if(currentElement=="Width") {
+                            } else if(currentElement=="Width") {
                                 this.options.WindowWidth=this.defaultSettings.WindowWidth;
                             } else if(currentElement=="Height") {
                                 this.options.WindowHeight=this.defaultSettings.WindowHeight;
@@ -408,7 +408,7 @@ namespace WindowsFormsApplication1 {
                         throw new Exception();
                     }
                 }
-            } catch(Exception e){
+            } catch(Exception e) {
                 this.options=this.defaultSettings;
                 rewrite=true;
             }
@@ -430,7 +430,7 @@ namespace WindowsFormsApplication1 {
         private List<PointF> Path=new List<PointF>();
         private List<double> Range=new List<double>();
         public List<PythonSegment> Body=new List<PythonSegment>();
-        public Python(double accel,double apple) {
+        public Python(double accel, double apple) {
             this.appleSpeed=apple;
             this.acceleration=accel;
             this.Body.Add(new PythonHead(64, 64, this));
@@ -440,12 +440,12 @@ namespace WindowsFormsApplication1 {
             this.Link();
         }
         public void Control() {
-            Point cursor=Program.GlobalForm.GetCusor();  
+            Point cursor=Program.GlobalForm.GetCusor();
             this.Body[0].Speed=this.speed;
             this.Body[0].Control();
             this.Path.Add(this.newPoint);
             this.Range.Add(this.speed);
-            for(int i=1; i<this.Body.Count;i++){
+            for(int i=1; i<this.Body.Count; i++) {
                 PythonSegment p=this.Body[i];
                 //p.Speed=this.speed;
                 p.Control();
@@ -459,8 +459,8 @@ namespace WindowsFormsApplication1 {
                     pf=this.Path[i];
                     this.Path.RemoveRange(0, i+1);
                     this.Range.RemoveRange(0, i+1);
-                    this.Path.Insert(0,new PointF((float)this.Body[seg-1].X,(float)this.Body[seg-1].Y));
-                    this.Range.Insert(0,npr);
+                    this.Path.Insert(0, new PointF((float)this.Body[seg-1].X, (float)this.Body[seg-1].Y));
+                    this.Range.Insert(0, npr);
                 } else if(mdr<this.Range[i]) {
                     double d = mdr/this.Range[i];
                     double mdx=d*(this.Path[i].X-this.Path[i+1].X);
@@ -521,7 +521,7 @@ namespace WindowsFormsApplication1 {
                 this.target=value;
             }
         }
-        public void AddPoint(Point p,double s) {
+        public void AddPoint(Point p, double s) {
             this.Path.Enqueue(p);
             this.Range.Enqueue(s);
         }
@@ -533,12 +533,12 @@ namespace WindowsFormsApplication1 {
         }
         public PythonSegment NewSegment() {
             PythonSegment ps=new PythonSegment(this.x, this.y, this.parent);
-            ps.NewQueue(new Queue<Point>(this.Path),new Queue<double>(this.Range));
+            ps.NewQueue(new Queue<Point>(this.Path), new Queue<double>(this.Range));
             this.parent.Body.Add(ps);
             this.parent.Link();
             return ps;
         }
-        public void NewQueue(Queue<Point> path,Queue<double> range) {
+        public void NewQueue(Queue<Point> path, Queue<double> range) {
             this.Path=path;
             this.Range=range;
         }
@@ -614,7 +614,7 @@ namespace WindowsFormsApplication1 {
         }
     }
     public abstract class Sprite {
-        protected double x, y, rotation, speed,xscale=1,yscale=1;
+        protected double x, y, rotation, speed, xscale=1, yscale=1;
         protected double visibleRotation;
         protected double collisionRange=0;
         public bool CheckCollision(Point p, double r) {
@@ -702,11 +702,11 @@ namespace WindowsFormsApplication1 {
             this.currentColor=this.danger;
         }
         public override void DrawSprite(Graphics gr) {
-            gr.FillEllipse(new SolidBrush(this.currentColor), new Rectangle(-18, -18, 36, 36)); 
-           // gr.DrawString("M", new Font(FontFamily.GenericMonospace, 16, FontStyle.Bold), new SolidBrush(Color.Yellow), new PointF(-14, -14));
-            
+            gr.FillEllipse(new SolidBrush(this.currentColor), new Rectangle(-18, -18, 36, 36));
+            // gr.DrawString("M", new Font(FontFamily.GenericMonospace, 16, FontStyle.Bold), new SolidBrush(Color.Yellow), new PointF(-14, -14));
+
         }
-        public void Control(Form1 f){
+        public void Control(Form1 f) {
             timer--;
             if(timer<=0) {
                 f.RequestDeletion(this);
@@ -739,7 +739,7 @@ namespace WindowsFormsApplication1 {
         private string text;
         public delegate void ButtonAction();
         private ButtonAction action;
-        public GUIButton(int x,int y,int width,int height,string text){
+        public GUIButton(int x, int y, int width, int height, string text) {
             this.x=x;
             this.y=y;
             this.width=width;
@@ -778,9 +778,9 @@ namespace WindowsFormsApplication1 {
             } else {
                 gr.FillRectangle(new SolidBrush(Color.Red), 0, 0, this.width, this.height);
                 gr.DrawRectangle(new Pen(Color.Yellow, 2), 0, 0, this.width, this.height);
-            } 
+            }
             gr.DrawString(this.text, new Font(FontFamily.GenericMonospace, (int)(this.height*0.6)), new SolidBrush(Color.Yellow), new PointF(0, 0));
-            
+
         }
         public void AddAction(ButtonAction a) {
             this.action+=a;
@@ -789,7 +789,7 @@ namespace WindowsFormsApplication1 {
     public class GUITitle:GUIElement {
         private int height;
         private string text;
-        public GUITitle(int x, int y, int height,string text) {
+        public GUITitle(int x, int y, int height, string text) {
             this.x=x;
             this.y=y;
             this.height=height;
@@ -808,7 +808,7 @@ namespace WindowsFormsApplication1 {
         }
     }
     public class GUINumeric:GUIElement {
-        private int width,height;
+        private int width, height;
         private GUIButton leftButton, rightButton;
         private GUITitle title;
         private double value, minValue, maxValue, step;
@@ -859,7 +859,7 @@ namespace WindowsFormsApplication1 {
         }
     }
     public class GUIStrip:GUIElement {
-        private int width, height,state;
+        private int width, height, state;
         private double value;
         public double Value {
             get {
