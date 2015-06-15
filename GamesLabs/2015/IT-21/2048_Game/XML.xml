@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<setting xmlns="urn:GameConfig-schema">
+<GameSetting>
+  <FormColor>gameover2.png</FormColor>
+    <BackgroundColor>
+      <Color1>Yellow.png</Color1>
+    </BackgroundColor>
+      </GameSetting>  
+</setting>
