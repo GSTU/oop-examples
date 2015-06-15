@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Block>
+
+<player_one>
+<color>Blue</color>
+</player_one>
+
+<player_two>
+<color>Red</color>
+</player_two>
+
+<first_player>
+<player>white</player>
+</first_player>
+
+</Block>
