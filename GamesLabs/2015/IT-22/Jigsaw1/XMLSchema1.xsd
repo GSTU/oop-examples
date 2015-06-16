@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="color" type="Color"></xs:element>
+        <xs:element name="cartinka"> </xs:element>
+        <xs:element name="rasshirenie" ></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Color">
+    <xs:sequence>
+      <xs:element name="aaa" type="Asd"></xs:element>
+      <xs:element name="bbb" type="Asd"></xs:element>
+      <xs:element name="ccc" type="Asd"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--<xs:simpleType name="Filter">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="#[a-zA-Z0-9]"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>-->
+
+  <xs:simpleType name="Asd">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"></xs:minInclusive>
+      <xs:maxInclusive value="254"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+</xs:schema>
+
+
+
+
+  
