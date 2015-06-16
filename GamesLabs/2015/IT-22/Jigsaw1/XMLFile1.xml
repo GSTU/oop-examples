@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="XMLSchema1.xsd">
+  <color>
+    <aaa>254</aaa>
+    <bbb>100</bbb>
+    <ccc>100</ccc>
+  </color>
+  <cartinka>Summer</cartinka>
+  <rasshirenie>jpg</rasshirenie>  
+</config>
