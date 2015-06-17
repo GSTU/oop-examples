@@ -975,12 +975,12 @@ namespace MinThantSin.OpenSourceGames
                     gfx.FillRectangle(sbr, 0, 0, _background.Width, _background.Height);
                 }
             }
-
-            if (showGhostPicture)            
+            // тут к хуям всё крашиться на новых версиях на старых норм пашит без краша 
+          /*  if (showGhostPicture)            
             {
                 _background = ImageUtilities.AlphaBlendMatrix(_background, _sourcePicture, GameSettings.GHOST_PICTURE_ALPHA);
             }
-
+            */
       
 
             using (Graphics gfx = Graphics.FromImage(_board))

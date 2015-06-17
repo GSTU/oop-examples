@@ -142,9 +142,13 @@ namespace ImageProcessing
 
         public static Bitmap AlphaBlendMatrix(Bitmap destImage, Bitmap srcImage, byte alpha)
         {
+           
             Bitmap alphaBlendedImage = (Bitmap)destImage.Clone();
-
+           
+            // for the matrix the range is 0.0 - 1.0
             float alphaNorm = (float)alpha / 255.0F;
+
+            // just change the alpha
             ColorMatrix matrix = new ColorMatrix(new float[][]{
                             new float[] {1F, 0, 0, 0, 0},
                             new float[] {0, 1F, 0, 0, 0},
@@ -155,16 +159,41 @@ namespace ImageProcessing
             ImageAttributes imageAttributes = new ImageAttributes();
             imageAttributes.SetColorMatrix(matrix);
 
+
             int offsetX = (destImage.Width - srcImage.Width) / 2;
             int offsetY = (destImage.Height - srcImage.Height) / 2;
+
+
+
+        /*    int offsetX = (destImage.Width - srcImage.Width) / 2;
+            int offsetY = (destImage.Height - srcImage.Height) / 2;*/
 
             using (Graphics g = Graphics.FromImage(alphaBlendedImage))
             {
                 g.CompositingMode = CompositingMode.SourceOver;
                 g.CompositingQuality = CompositingQuality.HighQuality;
-                g.DrawImage(srcImage, new Rectangle(offsetX, offsetY, srcImage.Width, srcImage.Height), 0, 0, srcImage.Width, srcImage.Height, GraphicsUnit.Pixel, imageAttributes);
-            }
 
+                // Scaled image (stretched)
+                //g.DrawImage(srcImage,
+                //    new Rectangle(0, 0, destImage.Width, destImage.Height),
+                //    0,
+                //    0,
+                //    srcImage.Width,
+                //    srcImage.Height,
+                //    GraphicsUnit.Pixel,
+                //    imageAttributes);
+
+                // No scaling
+                g.DrawImage(srcImage,
+                    new Rectangle(offsetX, offsetY, srcImage.Width, srcImage.Height),
+                    0,
+                    0,
+                    srcImage.Width,
+                    srcImage.Height,
+                    GraphicsUnit.Pixel,
+                    imageAttributes);
+            }
+            
             return alphaBlendedImage;
         }
 
