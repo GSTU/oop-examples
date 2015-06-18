@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="XMLSchema1.xsd">
+  <min1>2</min1>
+  <min2>11</min2>
+  <min3>41</min3>
+  <pole1>
+    <mr1>8</mr1>
+    <mc1>8</mc1>
+   </pole1>
+</config>
