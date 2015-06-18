@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="xsd.xsd">
+  <swsize>
+    <x>600</x>
+    <y>300</y>
+  </swsize>
+  <lettercolor>Black</lettercolor>
+  <themecolor>Orange</themecolor>
+</config>
