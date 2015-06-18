@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="color">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="width">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="512"/>
+      <xs:maxInclusive value="1440"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="height">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="384"/>
+      <xs:maxInclusive value="1028"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="decimal">
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Color">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="R" type="color" />
+              <xs:element name="G" type="color" />
+              <xs:element name="B" type="color" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Width" type="width" />
+              <xs:element name="Height" type="height" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Speed" type="decimal"/>
+        <xs:element name="Spawn" type="decimal"/>
+        <xs:element name="Acceleration">
+          <xs:simpleType>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="10"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
