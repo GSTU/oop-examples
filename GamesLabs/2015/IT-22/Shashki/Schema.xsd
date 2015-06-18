@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="color">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="width">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="200"/>
+      <xs:maxInclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Color">
+   <xs:sequence>
+    <xs:element name="R" type="color" />
+    <xs:element name="G" type="color" />
+    <xs:element name="B" type="color" />     
+   </xs:sequence>
+  </xs:complexType>
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="Color" name="White"/>
+        <xs:element type="Color" name="Black"/>
+        <xs:element type="width" name="Size"/>          
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
