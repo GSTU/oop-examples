@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<Block>
+<player>
+   <x>4</x>
+    <y>1</y>
+ </player>
+<size>
+   <x>10</x>
+    <y>10</y>
+ </size>
+<finish>
+   <x>6</x>
+    <y>6</y>
+ </finish>
+<box>
+   <x>2</x>
+    <y>7</y>
+ </box>
+<box>
+   <x>3</x>
+    <y>6</y>
+ </box>
+<box>
+   <x>3</x>
+    <y>8</y>
+ </box>
+<box>
+   <x>5</x>
+    <y>3</y>
+ </box>
+<box>
+   <x>6</x>
+    <y>8</y>
+ </box>
+<box>
+   <x>7</x>
+    <y>1</y>
+ </box>
+<box>
+   <x>8</x>
+    <y>8</y>
+ </box>
+</Block>

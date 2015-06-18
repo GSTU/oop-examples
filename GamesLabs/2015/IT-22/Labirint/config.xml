@@ -1,0 +1,115 @@
+<?xml version='1.0'?>
+<Block>
+<player>
+   <x>2</x>
+    <y>1</y>
+ </player>
+<size>
+   <x>20</x>
+    <y>20</y>
+ </size>
+<finish>
+   <x>17</x>
+    <y>6</y>
+ </finish>
+<box>
+   <x>4</x>
+    <y>5</y>
+ </box>
+<box>
+   <x>4</x>
+    <y>15</y>
+ </box>
+<box>
+   <x>4</x>
+    <y>16</y>
+ </box>
+<box>
+   <x>4</x>
+    <y>18</y>
+ </box>
+<box>
+   <x>6</x>
+    <y>10</y>
+ </box>
+<box>
+   <x>7</x>
+    <y>14</y>
+ </box>
+<box>
+   <x>7</x>
+    <y>18</y>
+ </box>
+<box>
+   <x>8</x>
+    <y>15</y>
+ </box>
+<box>
+   <x>8</x>
+    <y>16</y>
+ </box>
+<box>
+   <x>9</x>
+    <y>9</y>
+ </box>
+<box>
+   <x>9</x>
+    <y>12</y>
+ </box>
+<box>
+   <x>10</x>
+    <y>10</y>
+ </box>
+<box>
+   <x>11</x>
+    <y>4</y>
+ </box>
+<box>
+   <x>11</x>
+    <y>14</y>
+ </box>
+<box>
+   <x>11</x>
+    <y>17</y>
+ </box>
+<box>
+   <x>11</x>
+    <y>18</y>
+ </box>
+<box>
+   <x>12</x>
+    <y>7</y>
+ </box>
+<box>
+   <x>14</x>
+    <y>8</y>
+ </box>
+<box>
+   <x>14</x>
+    <y>17</y>
+ </box>
+<box>
+   <x>15</x>
+    <y>5</y>
+ </box>
+<box>
+   <x>15</x>
+    <y>12</y>
+ </box>
+<box>
+   <x>15</x>
+    <y>17</y>
+ </box>
+<box>
+   <x>16</x>
+    <y>3</y>
+ </box>
+<box>
+   <x>16</x>
+    <y>9</y>
+ </box>
+<box>
+   <x>17</x>
+    <y>13</y>
+ </box>
+</Block>
