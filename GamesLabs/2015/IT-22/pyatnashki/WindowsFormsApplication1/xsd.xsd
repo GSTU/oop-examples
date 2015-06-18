@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           >
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="swsize">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="x" type="sws"/>
+              <xs:element name="y" type="sws"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lettercolor" type="lc" />
+        <xs:element name="themecolor" type="tc" />
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+  <xs:simpleType name="sws">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="100" />
+      <xs:maxInclusive value="600" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="lc">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Black"/>
+      <xs:enumeration value="Blue"/>
+      <xs:enumeration value="White"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tc">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Red"/>
+      <xs:enumeration value="Green"/>
+      <xs:enumeration value="Brown"/>
+      <xs:enumeration value="Orange"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
