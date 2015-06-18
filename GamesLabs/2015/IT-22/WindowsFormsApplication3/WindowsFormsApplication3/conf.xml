@@ -1,0 +1,10 @@
+﻿<?xml version='1.0'?>
+<Block>
+ <count_fish>300</count_fish>
+  <color_fish>Yellow</color_fish>
+  <player>
+    <x>200</x>
+    <y>400</y>
+    <color>Black</color> 
+  </player>
+</Block>
