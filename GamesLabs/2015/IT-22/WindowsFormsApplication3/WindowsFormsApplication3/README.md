@@ -1,1 +1,1 @@
-Стариков Никита IT-22
+Starikov Nikita ИТ-22
