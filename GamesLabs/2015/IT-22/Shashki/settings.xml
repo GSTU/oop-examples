@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+ <White>
+  <R>255</R>
+  <G>255</G>
+  <B>0</B>
+ </White>
+ <Black>
+  <R>0</R>
+  <G>64</G>
+  <B>0</B>
+ </Black>
+ <Size>500</Size>
+</settings>
