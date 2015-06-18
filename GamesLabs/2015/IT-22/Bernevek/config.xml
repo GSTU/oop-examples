@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="configSchema.xsd">
+  <color>
+    <backColor>#FF5F9EA0</backColor>
+    <popColor>#FFFFFF00</popColor>
+  </color>
+  <score>5</score>
+  <label>Начать</label>
+</config>
