@@ -1,1 +1,0 @@
-Starikov Nikita IT-22
