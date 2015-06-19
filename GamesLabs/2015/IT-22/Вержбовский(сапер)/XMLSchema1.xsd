@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:element name="config">
+    <xs:complexType>
+      <xs:sequence>
+       <xs:element name="min1" type="mines"></xs:element>
+	  <xs:element name="min2" type="mines"></xs:element>
+	  <xs:element name="min3" type="mines"></xs:element>
+       <xs:element name="pole1" type="pole1"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="mines">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"></xs:minInclusive>
+      <xs:maxInclusive value="100"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="pole1">
+    <xs:sequence>
+      <xs:element name="mr1" type="Kletki_mr1"></xs:element>
+      <xs:element name="mc1" type="Kletki_mc1"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Kletki_mr1">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"></xs:minInclusive>
+      <xs:maxInclusive value="10"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+<xs:simpleType name="Kletki_mc1">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"></xs:minInclusive>
+      <xs:maxInclusive value="10"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
