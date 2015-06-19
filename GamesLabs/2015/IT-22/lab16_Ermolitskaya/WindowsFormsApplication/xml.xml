@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <path>..\..\Resources\3.JPG</path>
+  <width>4</width>
+  <form>
+    <forecolor>Black</forecolor>
+    <backcolor>White</backcolor>
+  </form>
+</config>
+
